@@ -14,6 +14,8 @@ class ResultCell: UITableViewCell {
     @IBOutlet weak var usrImage: UIImageView!
     @IBOutlet weak var isFollow: UISwitch!
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

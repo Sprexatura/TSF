@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import InstagramKit
 
 class ResultTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,15 +38,19 @@ class ResultTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as! ResultCell
+        cell.idLabel.text = "11"
 
         // Configure the cell...
+        
 
         return cell
     }
-    */
+    
+    
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -92,4 +97,16 @@ class ResultTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension ResultTableViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let tag = textField.text {
+            InstagramEngine.shared().getMediaWithTagName(tag, withSuccess: { (items, pageInfo) in
+                print(items)
+            }, failure: nil)
+        }
+    
+        return true
+    }
 }

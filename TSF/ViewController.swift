@@ -35,13 +35,6 @@ class ViewController: UIViewController, UIWebViewDelegate {
             try InstagramEngine.shared().receivedValidAccessToken(from: request.url!)
             self.performSegue(withIdentifier: "ResultTableViewController", sender: nil)
             
-            InstagramEngine.shared().searchTags(withName: "맛집", withSuccess: { (items, pageInfo) in
-                print(items)
-
-            }, failure: { (err, code) in
-                print(err)
-            })
-            
             return false
         } catch {
             

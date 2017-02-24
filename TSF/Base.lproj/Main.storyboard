@@ -99,6 +99,9 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="yuo-Vr-WvI" id="4qP-PF-4d7"/>
+                            </connections>
                         </textField>
                     </navigationItem>
                 </tableViewController>

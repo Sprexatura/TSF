@@ -10,6 +10,7 @@
 		2CA3111D4AFE1CDB0FBC0794 /* Pods_TSFUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2F8C6E93B5782AF16E19FA /* Pods_TSFUITests.framework */; };
 		963A0E2E1E608D9B00489AAC /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963A0E2D1E608D9B00489AAC /* ResultTableViewController.swift */; };
 		963A0E301E608E5000489AAC /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963A0E2F1E608E5000489AAC /* ResultCell.swift */; };
+		963A0E321E60A0B100489AAC /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963A0E311E60A0B100489AAC /* SearchResult.swift */; };
 		96E8D6C61E608803003ADE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8D6C51E608803003ADE25 /* AppDelegate.swift */; };
 		96E8D6C81E608803003ADE25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8D6C71E608803003ADE25 /* ViewController.swift */; };
 		96E8D6CB1E608803003ADE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E8D6C91E608803003ADE25 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		608E3732986965B140049449 /* Pods-TSFTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSFTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TSFTests/Pods-TSFTests.release.xcconfig"; sourceTree = "<group>"; };
 		963A0E2D1E608D9B00489AAC /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		963A0E2F1E608E5000489AAC /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		963A0E311E60A0B100489AAC /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		96E8D6C21E608803003ADE25 /* TSF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E8D6C51E608803003ADE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E8D6C71E608803003ADE25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				96E8D6C71E608803003ADE25 /* ViewController.swift */,
 				963A0E2D1E608D9B00489AAC /* ResultTableViewController.swift */,
 				963A0E2F1E608E5000489AAC /* ResultCell.swift */,
+				963A0E311E60A0B100489AAC /* SearchResult.swift */,
 				96E8D6C91E608803003ADE25 /* Main.storyboard */,
 				96E8D6CC1E608803003ADE25 /* Assets.xcassets */,
 				96E8D6CE1E608803003ADE25 /* LaunchScreen.storyboard */,
@@ -454,6 +457,7 @@
 			files = (
 				96E8D6C81E608803003ADE25 /* ViewController.swift in Sources */,
 				96E8D6C61E608803003ADE25 /* AppDelegate.swift in Sources */,
+				963A0E321E60A0B100489AAC /* SearchResult.swift in Sources */,
 				963A0E301E608E5000489AAC /* ResultCell.swift in Sources */,
 				963A0E2E1E608D9B00489AAC /* ResultTableViewController.swift in Sources */,
 			);
