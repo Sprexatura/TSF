@@ -122,6 +122,16 @@
                                 <outlet property="delegate" destination="yuo-Vr-WvI" id="4qP-PF-4d7"/>
                             </connections>
                         </textField>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="l3l-Dr-l33">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0qM-wc-jPk">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Follow all"/>
+                                <connections>
+                                    <action selector="followAll:" destination="yuo-Vr-WvI" eventType="touchUpInside" id="VY4-dB-TWo"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78s-WC-RZK" userLabel="First Responder" sceneMemberID="firstResponder"/>

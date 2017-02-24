@@ -96,6 +96,31 @@ class ResultTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func followAll(_ sender: Any) {
+//         guard let data = self.data else {
+//            return
+//        }
+        
+        follow(self.data)
+        
+    }
+    
+    func follow(_ items: [InstagramMedia]?) {
+        guard var items = items, let item = items.popLast() else {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+            return
+        }
+        
+        InstagramEngine.shared().followUser(item.user.id, withSuccess: { [weak self] _ in
+            self?.follow(items)
+        }, failure: { (err, code) in
+            return
+        })
+
+    }
 
 }
 

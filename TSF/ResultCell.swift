@@ -49,6 +49,9 @@ class ResultCell: UITableViewCell {
                     if user["outgoing_status"] as? String == "none" {
                         self?.isFollow.isOn = false
                     }
+                    else {
+                        self?.isFollow.isOn = true
+                    }
                 }, failure: {
                     error, code in
                     
