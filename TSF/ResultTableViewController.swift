@@ -42,6 +42,7 @@ class ResultTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as! ResultCell
 
         // Configure the cell...
+        cell.media = data[indexPath.row]
         
         
 

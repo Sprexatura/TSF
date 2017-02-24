@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import InstagramKit
+import AFNetworking
 
 class ResultCell: UITableViewCell {
 
@@ -14,6 +16,27 @@ class ResultCell: UITableViewCell {
     @IBOutlet weak var usrImage: UIImageView!
     @IBOutlet weak var isFollow: UISwitch!
     
+    var media: InstagramMedia? {
+        didSet {
+            if let username = media?.user.username {
+                idLabel.text = username
+            }
+            if let userImage = media?.user.profilePictureURL {
+                usrImage.setImageWith(userImage)
+            }
+            if let user = media?.user {
+                InstagramEngine.shared().getRelationshipStatus(ofUser: user.id, withSuccess: { [weak self]
+                    user in
+                    if user["outgoing_status"] as? String == "none" {
+                        self?.isFollow.isOn = false
+                    }
+                }, failure: {
+                    error, code in
+                    
+                })
+            }
+        }
+    }
     
     
     override func awakeFromNib() {
