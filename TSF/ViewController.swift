@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import InstagramKit
 
 class ViewController: UIViewController {
 

@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>InstagramAppClientId</key>
+	<string>dab734e0cd294a55a7658b8d65f12396</string>
+	<key>InstagramAppRedirectURL</key>
+	<string>http://sprexatura.blogspot.kr</string>
 </dict>
 </plist>
