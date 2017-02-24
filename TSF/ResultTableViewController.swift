@@ -11,6 +11,8 @@ import InstagramKit
 
 class ResultTableViewController: UITableViewController {
     
+    var data:[InstagramMedia] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,22 +30,19 @@ class ResultTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+ 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return data.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as! ResultCell
-        cell.idLabel.text = "11"
 
         // Configure the cell...
+        
         
 
         return cell
@@ -104,6 +103,9 @@ extension ResultTableViewController: UITextFieldDelegate {
         if let tag = textField.text {
             InstagramEngine.shared().getMediaWithTagName(tag, withSuccess: { (items, pageInfo) in
                 print(items)
+                
+                self.data.append(contentsOf: items)
+                self.tableView.reloadData()
             }, failure: nil)
         }
     
