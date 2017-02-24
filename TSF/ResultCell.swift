@@ -16,6 +16,25 @@ class ResultCell: UITableViewCell {
     @IBOutlet weak var usrImage: UIImageView!
     @IBOutlet weak var isFollow: UISwitch!
     
+    @IBAction func switchAction(_ sender: UISwitch) {
+        if sender.isOn == true {
+            if let userId = media?.user.id {
+                InstagramEngine.shared().followUser(userId, withSuccess: { (items) in
+                }, failure: { (err, code) in
+                        
+                })
+            }
+        } else {
+            if let userId = media?.user.id {
+                InstagramEngine.shared().unfollowUser(userId, withSuccess: { (items) in
+                }, failure: { (err, code) in
+                    
+                })
+            }
+        }
+        
+    }
+    
     var media: InstagramMedia? {
         didSet {
             if let username = media?.user.username {

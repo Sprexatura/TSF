@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,22 +63,40 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GhQ-cy-P3B">
-                                            <rect key="frame" x="16" y="8" width="73" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m38-d6-cpd">
-                                            <rect key="frame" x="97" y="19" width="146" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyd-1p-zIR">
+                                            <rect key="frame" x="318" y="14" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="switchAction:" destination="cKs-NK-LPd" eventType="valueChanged" id="Fpp-iC-diG"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m38-d6-cpd">
+                                            <rect key="frame" x="60" y="18" width="16.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyd-1p-zIR">
-                                            <rect key="frame" x="298" y="14" width="51" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </switch>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GhQ-cy-P3B">
+                                            <rect key="frame" x="8" y="7.5" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="pkO-hE-eyz"/>
+                                                <constraint firstAttribute="height" constant="44" id="yTg-k5-4mB"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="22"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dyd-1p-zIR" firstAttribute="centerY" secondItem="nvl-HT-QAt" secondAttribute="centerY" id="IMg-vQ-Hp0"/>
+                                        <constraint firstItem="dyd-1p-zIR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m38-d6-cpd" secondAttribute="trailing" constant="8" id="QAq-fv-sTB"/>
+                                        <constraint firstItem="m38-d6-cpd" firstAttribute="leading" secondItem="GhQ-cy-P3B" secondAttribute="trailing" constant="8" id="QnD-Fk-SOx"/>
+                                        <constraint firstItem="GhQ-cy-P3B" firstAttribute="leading" secondItem="nvl-HT-QAt" secondAttribute="leading" constant="8" id="UyG-C9-Nzt"/>
+                                        <constraint firstItem="GhQ-cy-P3B" firstAttribute="centerY" secondItem="nvl-HT-QAt" secondAttribute="centerY" id="cHp-CZ-hSF"/>
+                                        <constraint firstItem="dyd-1p-zIR" firstAttribute="trailing" secondItem="nvl-HT-QAt" secondAttribute="trailingMargin" id="lZh-Xv-lT0"/>
+                                        <constraint firstItem="m38-d6-cpd" firstAttribute="centerY" secondItem="nvl-HT-QAt" secondAttribute="centerY" id="scz-gz-G9Z"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="idLabel" destination="m38-d6-cpd" id="C05-Mh-U6G"/>
@@ -93,7 +112,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="cDX-x4-2MB">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" id="wwC-g6-dEg">
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="맛집" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" id="wwC-g6-dEg">
                             <rect key="frame" x="113" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <nil key="textColor"/>
