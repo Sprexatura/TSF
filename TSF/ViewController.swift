@@ -11,9 +11,23 @@ import InstagramKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        /**
+         NSURL *authURL = [[InstagramEngine sharedEngine] authorizationURL];
+         [self.webView loadRequest:[NSURLRequest requestWithURL:authURL]];
+         **/
+        let authURL = InstagramEngine.shared().authorizationURL(for: [InstagramKitLoginScope.relationships,
+                                                                      InstagramKitLoginScope.comments,
+                                                                      InstagramKitLoginScope.likes,
+                                                                      InstagramKitLoginScope.followerList,
+                                                                      InstagramKitLoginScope.publicContent])
+        webView.loadRequest(URLRequest(url: authURL))
+        
+
     }
 
     override func didReceiveMemoryWarning() {
