@@ -99,13 +99,22 @@ class ResultTableViewController: UITableViewController {
 
 }
 
+
 extension ResultTableViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let tag = textField.text {
             InstagramEngine.shared().getMediaWithTagName(tag, withSuccess: { (items, pageInfo) in
-                print(items)
                 
-                self.data.append(contentsOf: items)
+                var filteredItems = [InstagramMedia]()
+                var dic = [String:Bool]()
+
+                for item in items {
+                    if dic[item.user.id] != true {
+                        dic[item.user.id] = true
+                        filteredItems.append(item)
+                    }
+                }
+                self.data = filteredItems
                 self.tableView.reloadData()
             }, failure: nil)
         }
