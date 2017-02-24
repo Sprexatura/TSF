@@ -18,8 +18,17 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>InstagramAppClientId</key>
+	<string>dab734e0cd294a55a7658b8d65f12396</string>
+	<key>InstagramAppRedirectURL</key>
+	<string>http://sprexatura.blogspot.kr</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -41,9 +50,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>InstagramAppClientId</key>
-	<string>dab734e0cd294a55a7658b8d65f12396</string>
-	<key>InstagramAppRedirectURL</key>
-	<string>http://sprexatura.blogspot.kr</string>
 </dict>
 </plist>
