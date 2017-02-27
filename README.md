@@ -7,7 +7,7 @@ tag, search, follow 의 약자로 1회 RGP Hackathon 의 결과 프로젝트 중
 
 #Screenshots
 
-<img src="https://github.com/sprexatura/TIF/master/Screenshots/working.gif">
+<img src="https://github.com/Sprexatura/TSF/blob/master/Screenshots/working.gif">
 
 #1st RGP Hackathon Post meeting comments
 
