@@ -117,7 +117,7 @@ class ResultTableViewController: UITableViewController {
         InstagramEngine.shared().followUser(item.user.id, withSuccess: { [weak self] _ in
             self?.follow(items)
         }, failure: { (err, code) in
-            return
+            return
         })
 
     }
